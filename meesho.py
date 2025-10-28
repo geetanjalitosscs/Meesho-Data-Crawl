@@ -50,7 +50,7 @@ def extract_price_rating(driver, product_id):
     """Extract price and rating from the current page"""
     try:
         # Wait for page to load
-        time.sleep(5)
+        time.sleep(12)
         
         # Try multiple selectors to find price
         price = None
@@ -174,11 +174,9 @@ def extract_price_rating(driver, product_id):
         
         # Try CSS selectors first
         rating_count_selectors_css = [
-            'span.sc-eDvSVe.YtJFx',
-            'span[font-size="16px"][font-weight="book"][color="greyT2"]',
-            'span[font-size="16px"]',
-        ]
-        
+    'span.sc-dOfePm.IwbSn.ShippingInfo__OverlineStyled-sc-frp12n-4.ebArIt',
+    'span[font-size="12px"][font-weight="book"][color="greyT2"]',  # backup
+]
         for selector in rating_count_selectors_css:
             try:
                 rating_count_element = driver.find_element(By.CSS_SELECTOR, selector)
@@ -338,7 +336,7 @@ try:
         
         # Delay between requests
         if i < len(product_ids):
-            delay = 5
+            delay = 12
             print_flush(f"\n⏳ Waiting {delay} seconds before next request...")
             time.sleep(delay)
     

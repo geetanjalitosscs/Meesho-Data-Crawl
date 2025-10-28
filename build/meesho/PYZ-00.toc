@@ -1,4 +1,4 @@
-('C:\\Users\\geeta\\OneDrive\\Desktop\\crawl\\build\\meesho\\PYZ-00.pyz',
+('D:\\Crawling\\Meesho_Data\\build\\meesho\\PYZ-00.pyz',
  [('OpenSSL',
    'C:\\Users\\geeta\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\OpenSSL\\__init__.py',
    'PYMODULE'),
